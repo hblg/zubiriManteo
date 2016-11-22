@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <!--<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>-->
+	<script>
+   
+<!-- JQUERY FOR SLIDING NAVIGATION -->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+ </head> 
+	
+<body>
+<header id="header">
+<div class="content">
+<!--<div id="logo"><h4> Zubiri Manteo</h4></div>-->
+
+<nav id="nav">
+	<ul>
+		<li><a href="/parallax_final/parallax/index.html">Zubiri</a></li>
+		<li><a href="/parallax_final/parallax/nosotros.html">Nosotros</a></li>
+		<li><a href="/parallax_final/parallax/formacion.html"> Formación</a></li>
+		<li><a  href="/parallax_final/parallax/proyectos.html"> Proyectos</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>	
+<div id="proyect">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h5 class="quotes">Eso</h5>
+								<h2 id="lista"><ul>Oferta de ESO imprescindible para realizar estudios de cualquier Bachillerato y Ciclo de Grado Medio.
+								<li>1. Ciclo (1.ESO y  2.ESO)</li>
+								<li>2. Ciclo (3.ESO)</li>
+								<li>2. Ciclo (4.ESO)</li></ul></h2>
+		    <h5 class="quotes">BACHILLERATO</h5>
+								<h2 id="lista"><ul>Oferta de bachillerato necesaria para poder realizar estudios que tengan que ver con Humandidades, Ciencia y Tecnología tanto a nivel de Universidad como a nivel de Ciclos Formativos.
+								<li>Bachillerato de Ciencias</li>
+								<li>Bachillerato de Humanidades y Ciencias Sociales</li></ul></h2>
+		    <h5 class="quotes">CICLOS FORMATIVOS DE GRADO MEDIO</h5>
+								<h2 id="lista"><ul>Teniendo en cuenta las características de Donostia, se ofertan ciclos formativos del área de servicios: Informática, Comercio y Administración.
+								<li>Comercio y Marketing</li>
+								<li>Administración</li>
+								<li>Informática</li></ul></h2>
+		    <h5 class="quotes">CICLOS FORMATIVOS DE GRADO SUPERIOR</h5>
+								<h2 id="lista"><ul>Teniendo en cuenta las características de Donostia, se ofertan ciclos formativos del área de servicios: Informática, Turismo, Comercio y Administración.</ul>
+								<ul>Comercio y Marketing
+								<li>Gestión de Ventas y Espacios Comerciales</li>
+								<li>Marketing y Publicidad</li></ul>
+								<ul>Hostelería y Turismo
+								<li>Agencias de Viaje y Gestión de Eventos</li>
+								<li>Guía, Información y Asistencias Turísticas</li></ul>
+								<ul>Administración
+								<li>Administración y Finanzas</li></ul>
+								<ul>Informática
+								<li>Desarrollo de Aplicaciones Web</li>
+								<li>Administración de Sistemas Informáticos en Red</li></ul></h2>
+		   <h4 class="author_name_gray">formacion</h4>
+		</div> 
+		</div> 
+</div> 
+	<div >
+		<div id="copyright"><a href="http://www.zubirimanteo.hezkuntza.net">Copyright zubirimanteo.hezkuntza.net </a></div>  
+		</div> 
+</body>
+</html>

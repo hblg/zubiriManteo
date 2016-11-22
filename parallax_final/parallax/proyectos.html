@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <!--<link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>-->
+	<script>
+   
+<!-- JQUERY FOR SLIDING NAVIGATION -->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+ </head> 
+	
+<body>
+<header id="header">
+<div class="content">
+<!--<div id="logo"><h4> Zubiri Manteo</h4></div>-->
+
+<nav id="nav">
+	<ul>
+		<li><a href="/parallax_final/parallax/index.html">Zubiri</a></li>
+		<li><a href="/parallax_final/parallax/nosotros.html">Nosotros</a></li>
+		<li><a href="/parallax_final/parallax/formacion.html"> Formación</a></li>
+		<li><a  href="/parallax_final/parallax/proyectos.html"> Proyectos</a></li>
+
+	</ul>
+</nav>
+</div>
+</header>	
+<div id="proyect">
+		<div class="content" >
+            <div class="quotes_container">
+		    <h5 class="quotes">Ciclo Superior de Agencias de Viajes y Gestión de Eventos</h5>
+								<h2 id="lista"><ul>Primer curso:
+								<li>Estructura del Mercado Turístico. (Francés)</li>
+								<li>Protocolo y Relaciones Públicas</li></ul>
+								<ul>Segundo curso:
+								<li>Dirección de entidades de intermediación turística</li></ul></h2>
+		    <h5 class="quotes">Ciclo Superior de Administración de Sistemas Informáticos en red</h5>
+								<h2 id="lista"><ul>Primer curso:
+								<li>Lenguajes de Marcas y Sistemas de Gestión de Información</li>
+								<li>Gestión de Base de Datos</li></ul>
+								<ul>Segundo curso:
+								<li>Servicios de Red e Internet. (Curso 2015-16)</li>
+								<li>Administración de Sistemas Gestores de Bases de Datos.</li></ul></h2>
+		    <h5 class="quotes">Ciclo Superior de Administración y Finanzas</h5>
+								<h2 id="lista"><ul>Primer curso:
+								<li>Comunicación y Atención al Cliente</li>
+								<li>RR.HH y Responsabilidad Social Corporativa</li></ul>
+								<ul>Segundo curso:
+								<li>Gestión Financiera</li>
+								<li>Simulación Empresarial</li></ul></h2>
+		   <h4 class="author_name_gray">Proyectos</h4>
+		</div> 
+		</div> 
+</div> 
+	<div >
+		<div id="copyright"><a href="http://www.zubirimanteo.hezkuntza.net">Copyright zubirimanteo.hezkuntza.net </a></div>  
+		</div> 
+</body>
+</html>
